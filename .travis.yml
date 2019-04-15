@@ -1,0 +1,30 @@
+language: python
+# VERSION START
+python:
+- '3.4'
+- '3.5'
+- 3.5-dev
+- nightly
+# VERSION END
+sudo: required
+dist: trusty
+install:
+- pip install -r requirements.txt
+- pip install coveralls pypandoc docutils Pygments
+- sudo apt-get -qq update
+- sudo apt-get install -y pandoc
+script:
+- python setup.py check --restructuredtext --metadata -s
+- coverage run --source=plugins setup.py test
+after_success:
+- coveralls
+before_deploy: 
+deploy: # https://docs.travis-ci.com/user/deployment/pypi/
+  provider: pypi
+  user: 
+  skip_existing: true
+  password:
+    secure: 
+  on:
+    tags: true
+    branch: master
