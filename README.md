@@ -1,7 +1,5 @@
 # pdml2flow-base64strings
-_[pdml2flow] plugin_
-
-Extracts strings encoded in base64 from network traffic.
+_[pdml2flow] plugin to extract strings encoded in base64_
 
 ## Installation
 
