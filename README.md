@@ -37,7 +37,7 @@ $ tshark -i any -T pdml 2>/dev/null | pdml2flow +base64strings
 Extract only base64 encoded ascii strings:
 ```
 $ tshark -i any -T pdml 2>/dev/null | pdml2flow +base64strings --ascii
-^C{"frames": [66, 80, 84, 103, 106, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145], "path": "http.authorization.raw", "raw": "ZW50ZTpnZ2dnZ2c=", "decoded": "ente:gggggg"}
+{"frames": [66, 80, 84, 103, 106, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145], "path": "http.authorization.raw", "raw": "ZW50ZTpnZ2dnZ2c=", "decoded": "ente:gggggg"}
 {"frames": [67, 82, 85, 108, 110], "path": "http.authorization.raw", "raw": "ZW50ZTpnZ2dnZ2c=", "decoded": "ente:gggggg"}
 ```
 
