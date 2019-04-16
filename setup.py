@@ -36,9 +36,9 @@ setup(
         ),
     },
     # metadata
-    author = 'Author Name',
-    author_email = 'email@somwhere.com',
-    description = 'Plugin skeleton',
+    author = 'Ente',
+    author_email = 'ducksource@duckpond.ch',
+    description = 'Extracts strings encoded in base64 as comma separated value',
     long_description = long_description,
     include_package_data = True,
     license = 'Apache 2.0',
